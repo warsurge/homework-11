@@ -27,12 +27,7 @@ app.post("/api/notes", function (req,res) {
 // you'll need to read all notes from the db.json file, remove the note with the given id property, and then rewrite the notes to the db.json file.
 app.delete("/api/notes/:id", function (req,res){
     let chosenID =req.params.id;
-    //  for(i=0;i<notes.length;i++){
-        // var note= notes[i]
-        // if(note.id ==chosenID){
-        //     note.splice
-        // }
-    //  }
+
     const chosenIndex= notes.findIndex(note=> note.id == chosenID);
 
     notes.splice(chosenIndex,1);
